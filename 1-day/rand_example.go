@@ -8,9 +8,10 @@ import (
 )
 
 func main() {
-	s1 := rand.NewSource(time.Now().UnixNano())
-	rand := rand.New(s1)
+
 	for i := 0; i < 100; i++ {
+		s1 := rand.NewSource(time.Now().UnixNano())
+		rand := rand.New(s1)
 		randomNumber := rand.Intn(20)
 		Printf("%d ", randomNumber)
 	}
